@@ -1,0 +1,4 @@
+public:
+  libraries:
+    - name: Zefiros-Software/Fmt
+      version: '^4.0.0'

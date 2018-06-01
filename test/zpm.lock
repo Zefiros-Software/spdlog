@@ -1,0 +1,52 @@
+{
+  "definition": "./",
+  "optionals": [],
+  "private": {
+    "libraries": [ {
+      "definition": "../",
+      "hash": "560df2878ad308b27873b3cc5e810635d69cfad6",
+      "name": "Zefiros-Software/spdlog",
+      "public": {
+        "libraries": [ {
+          "definition": "https://github.com/Zefiros-Software/Fmt.git",
+          "hash": "135ab5cf71ed731fc9fa0653051e7d4884a3652f",
+          "name": "Zefiros-Software/Fmt",
+          "repository": "https://github.com/fmtlib/fmt.git",
+          "tag": "4.1.0",
+          "version": "4.1.0",
+          "versionRequirement": "^4.0.0"
+        } ]
+      },
+      "repository": "https://github.com/gabime/spdlog.git",
+      "tag": "v0.17.0",
+      "version": "0.17.0",
+      "versionRequirement": "^0.0.0 || ^1.0.0"
+    } ],
+    "modules": [ {
+      "definition": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
+      "hash": "66cac4a6aa7f109e0fb8ce9daaac9f4330307b46",
+      "name": "Zefiros-Software/Defaults",
+      "public": {
+        "libraries": [ {
+          "definition": "https://github.com/Zefiros-Software/GoogleTest.git",
+          "hash": "db5f9ec567daff3beba53fd0bcd98e3f3562404c",
+          "name": "Zefiros-Software/GoogleTest",
+          "repository": "https://github.com/google/googletest.git",
+          "tag": "HEAD",
+          "versionRequirement": "@head || ^1.0.0"
+        }, {
+          "definition": "https://github.com/Zefiros-Software/GoogleBenchmark.git",
+          "hash": "4c2af0788977d3bd900585528c2d08b875b2cd39",
+          "name": "Zefiros-Software/GoogleBenchmark",
+          "repository": "https://github.com/google/benchmark.git",
+          "tag": "HEAD",
+          "versionRequirement": "@head"
+        } ]
+      },
+      "repository": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
+      "tag": "HEAD",
+      "versionRequirement": "@head"
+    } ]
+  },
+  "repository": "./"
+}
