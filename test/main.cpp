@@ -29,17 +29,17 @@ int main(int, char *[])
         spd::get("console")->info("loggers can be retrieved from a global registry using the spdlog::get(logger_name) function");
 
         // Create basic file logger (not rotated)
-        auto my_logger = spd::basic_logger_mt("basic_logger", "logs/basic.txt");
+        auto my_logger = spd::basic_logger_mt("basic_logger", "basic.txt");
         my_logger->info("Some log message");
 
         // Create a file rotating logger with 5mb size max and 3 rotated files
-        auto rotating_logger = spd::rotating_logger_mt("some_logger_name", "logs/mylogfile.txt", 1048576 * 5, 3);
+        auto rotating_logger = spd::rotating_logger_mt("some_logger_name", "mylogfile.txt", 1048576 * 5, 3);
 
         for (int i = 0; i < 10; ++i)
         { rotating_logger->info("{} * {} equals {:>10}", i, i, i * i); }
 
         // Create a daily logger - a new file is created every day on 2:30am
-        auto daily_logger = spd::daily_logger_mt("daily_logger", "logs/daily.txt", 2, 30);
+        auto daily_logger = spd::daily_logger_mt("daily_logger", "daily.txt", 2, 30);
         // trigger flush if the log severity is error or higher
         daily_logger->flush_on(spd::level::err);
         daily_logger->info(123.44);
@@ -94,7 +94,7 @@ void async_example()
 {
     size_t q_size = 4096;
     spd::set_async_mode(q_size);
-    auto async_file = spd::daily_logger_st("async_file_logger", "logs/async_log.txt");
+    auto async_file = spd::daily_logger_st("async_file_logger", "async_log.txt");
 
     for (int i = 0; i < 100; ++i)
     { async_file->info("Async message #{}", i); }

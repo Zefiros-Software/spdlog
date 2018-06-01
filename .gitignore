@@ -34,3 +34,4 @@ Makefile
 
 -- Astyle
 .astylerc
+/test/*.txt
