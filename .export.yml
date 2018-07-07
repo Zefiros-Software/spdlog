@@ -1,6 +1,6 @@
 %YAML 1.1
 ---
-version: '>0.0.0 || @head'
+version: '>=5.0.0 || @head'
 export: |
 
     project "spdlog"
@@ -13,5 +13,18 @@ export: |
             defines "SPDLOG_FMT_EXTERNAL"
             
             zpm.uses("Zefiros-Software/Fmt")
+        ]]
+...
+---
+version: '>0.0.0'
+export: |
+
+    project "spdlog"
+
+        kind "StaticLib"
+
+        zpm.export [[
+            includedirs "include"
+            cppdialect "C++11"
         ]]
 ...
